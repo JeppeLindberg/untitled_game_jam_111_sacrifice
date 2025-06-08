@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc3hv7llrqc1s"]
+
+[ext_resource type="Script" uid="uid://g65coijnvovr" path="res://scripts/debug_spawn.gd" id="1_4njsw"]
+[ext_resource type="Texture2D" uid="uid://cnds3c4f2uyju" path="res://sprites/arrow_head.png" id="2_tr00c"]
+[ext_resource type="Texture2D" uid="uid://cqbiavgqhwk0p" path="res://sprites/circle.png" id="2_u4h42"]
+
+[node name="debug_spawn" type="Node2D"]
+script = ExtResource("1_4njsw")
+
+[node name="arrow" type="Sprite2D" parent="."]
+modulate = Color(0.750735, 0.680205, 0, 1)
+position = Vector2(2, 8.67362e-19)
+rotation = 1.5708
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_tr00c")
+
+[node name="sprite" type="Sprite2D" parent="."]
+modulate = Color(0.7449, 0.173298, 0.264108, 1)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_u4h42")

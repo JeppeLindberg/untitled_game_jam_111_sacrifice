@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://7w6tcxsiyq2g"]
+
+[ext_resource type="Script" uid="uid://djwqujy6xmihk" path="res://scripts/breakable_wall.gd" id="1_aifp0"]
+[ext_resource type="Texture2D" uid="uid://cdf7fvrtgh5je" path="res://sprites/white.png" id="2_bvnhn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(10, 10)
+
+[node name="breakable_wall" type="StaticBody2D"]
+script = ExtResource("1_aifp0")
+
+[node name="sprite" type="Sprite2D" parent="."]
+modulate = Color(0.652597, 0.444866, 0.35505, 1)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_bvnhn")
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
