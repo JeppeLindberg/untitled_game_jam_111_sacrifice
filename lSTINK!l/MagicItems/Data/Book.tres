@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MagicItemData" load_steps=3 format=3 uid="uid://cg31vtkf0f27u"]
+
+[ext_resource type="Script" uid="uid://c4dn87rftfnmq" path="res://lSTINK!l/MagicItems/Scripts/MagicItemData.gd" id="1_wl5f7"]
+[ext_resource type="SpriteFrames" uid="uid://bq21fyqcwa3ns" path="res://lSTINK!l/MagicItems/SpriteFrames/Book.tres" id="2_u373g"]
+
+[resource]
+script = ExtResource("1_wl5f7")
+energy = 10.0
+sprite_frames = ExtResource("2_u373g")
+metadata/_custom_type_script = "uid://c4dn87rftfnmq"

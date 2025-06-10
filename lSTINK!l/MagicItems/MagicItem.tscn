@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=3 uid="uid://f4beparo6paa"]
+
+[ext_resource type="SpriteFrames" uid="uid://bq21fyqcwa3ns" path="res://lSTINK!l/MagicItems/SpriteFrames/Book.tres" id="1_7wud7"]
+[ext_resource type="Script" uid="uid://crqglpvhysgkd" path="res://lSTINK!l/MagicItems/Scripts/MagicItem.gd" id="2_qujof"]
+[ext_resource type="Script" uid="uid://c4dn87rftfnmq" path="res://lSTINK!l/MagicItems/Scripts/MagicItemData.gd" id="3_7wud7"]
+[ext_resource type="Resource" uid="uid://cg31vtkf0f27u" path="res://lSTINK!l/MagicItems/Data/Book.tres" id="4_wk1on"]
+[ext_resource type="Resource" uid="uid://baolmj0am2qf6" path="res://lSTINK!l/MagicItems/Data/Pot.tres" id="5_eu03j"]
+[ext_resource type="Resource" uid="uid://bp1gek0qp0bqx" path="res://lSTINK!l/MagicItems/Data/Broom.tres" id="5_wk1on"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_22xei"]
+radius = 15.0
+
+[node name="MagicItem" type="RigidBody2D" groups=["Magic Item"]]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("2_qujof")
+possible_items = Array[ExtResource("3_7wud7")]([ExtResource("4_wk1on"), ExtResource("5_wk1on"), ExtResource("5_eu03j")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_22xei")
+
+[node name="Graphics" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("1_7wud7")
+autoplay = "default"
+frame_progress = 0.371746
+speed_scale = 2.0

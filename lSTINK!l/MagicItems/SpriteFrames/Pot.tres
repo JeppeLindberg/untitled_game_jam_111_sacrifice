@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://blghloer4nwxt"]
+
+[ext_resource type="Texture2D" uid="uid://nxos5bhwiq44" path="res://lSTINK!l/MagicItems/Sprites/Pot.png" id="1_vbnu0"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vbnu0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

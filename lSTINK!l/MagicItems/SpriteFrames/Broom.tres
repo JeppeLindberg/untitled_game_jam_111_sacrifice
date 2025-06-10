@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://d3ajtaq6hrksw"]
+
+[ext_resource type="Texture2D" uid="uid://bgfoh75o0euc5" path="res://lSTINK!l/MagicItems/Sprites/Broom.png" id="1_s0002"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s0002")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

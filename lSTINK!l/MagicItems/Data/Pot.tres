@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MagicItemData" load_steps=3 format=3 uid="uid://baolmj0am2qf6"]
+
+[ext_resource type="Script" uid="uid://c4dn87rftfnmq" path="res://lSTINK!l/MagicItems/Scripts/MagicItemData.gd" id="1_w4fq6"]
+[ext_resource type="SpriteFrames" uid="uid://blghloer4nwxt" path="res://lSTINK!l/MagicItems/SpriteFrames/Pot.tres" id="2_w4fq6"]
+
+[resource]
+script = ExtResource("1_w4fq6")
+energy = 50.0
+sprite_frames = ExtResource("2_w4fq6")
+metadata/_custom_type_script = "uid://c4dn87rftfnmq"

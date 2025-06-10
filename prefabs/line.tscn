@@ -1,5 +1,10 @@
-[gd_scene format=3 uid="uid://mmjmsfh161nm"]
+[gd_scene load_steps=2 format=3 uid="uid://mmjmsfh161nm"]
+
+[ext_resource type="Texture2D" uid="uid://ejqm2ycivr2i" path="res://lSTINK!l/BeamUnfinished.png" id="1_ccdpt"]
 
 [node name="line" type="Line2D"]
-points = PackedVector2Array(0, 0, 10, 10)
+texture_filter = 1
+points = PackedVector2Array(0, 0, 36, 18)
 width = 2.0
+texture = ExtResource("1_ccdpt")
+texture_mode = 1

@@ -1,0 +1,25 @@
+---Magic Items---
+
+--Signals--
+-EnergyChanged(amount:float) -> emitted anytime a magic items energy value changes
+-EnergyOut -> energy has run out
+-----------
+
+--Methods--
+-Set Data() -> sets the MagicItemData for an object if the items is predetermined it will use the item_ind 
+to set it manually
+
+-Drain Energy(amount:float) this will return a float it just subtracts from energy value and emits two signals
+EnergyChanged all the time (could be for energy bars above the object) or EnergyOut emitted when the object runs 
+out of energy (could be for score or some other stuff idrk just nice to have).
+
+--Energy Out--
+-If respawn is not turned on the object deletes its self however if its not it disables collision 
+turns invisible and re-enables after respawn time is out and selects a new object ( if not manually set )
+------------
+
+--Data Resource-- 
+-create new data but right clicking and finding it in resources 
+-assign two values [sprite_frames] and [Energy]
+-add to list of possible items in MagicItem Scene
+-----------------
