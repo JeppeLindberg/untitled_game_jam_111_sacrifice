@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://cja5m1iwn5vvh"]
+
+[ext_resource type="Script" uid="uid://bifoo35s5ctju" path="res://scripts/magic_item.gd" id="1_8j78j"]
+[ext_resource type="SpriteFrames" uid="uid://d3ajtaq6hrksw" path="res://lSTINK!l/MagicItems/SpriteFrames/Broom.tres" id="2_yunlu"]
+[ext_resource type="Script" uid="uid://bomjw8gkb2goo" path="res://scripts/follow.gd" id="3_puvyj"]
+[ext_resource type="Texture2D" uid="uid://cdf7fvrtgh5je" path="res://sprites/white.png" id="4_yunlu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_22xei"]
+radius = 15.0
+
+[sub_resource type="Curve2D" id="Curve2D_trceg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0)
+}
+point_count = 2
+
+[node name="broom" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_8j78j")
+unkillable = true
+speed = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_22xei")
+
+[node name="Graphics" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("2_yunlu")
+speed_scale = 2.0
+
+[node name="path" type="Path2D" parent="."]
+curve = SubResource("Curve2D_trceg")
+
+[node name="follow" type="PathFollow2D" parent="path"]
+rotation = 0.785398
+rotates = false
+script = ExtResource("3_puvyj")
+
+[node name="health_mask" type="Sprite2D" parent="."]
+self_modulate = Color(0.51599, 0, 0.103879, 1)
+clip_children = 1
+position = Vector2(0, 13)
+scale = Vector2(0.113838, 0.0186094)
+texture = ExtResource("4_yunlu")
+
+[node name="red" type="Sprite2D" parent="health_mask"]
+self_modulate = Color(0.51599, 0, 0.103879, 1)
+clip_children = 1
+position = Vector2(7.62939e-06, 0)
+texture = ExtResource("4_yunlu")
+
+[node name="health" type="Sprite2D" parent="health_mask"]
+self_modulate = Color(1.56425e-06, 0.567817, 0.225499, 1)
+texture = ExtResource("4_yunlu")

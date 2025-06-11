@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bpwmgbsotnefi"]
+[gd_scene load_steps=33 format=3 uid="uid://bpwmgbsotnefi"]
 
 [ext_resource type="Script" uid="uid://d3dpynfttdxbu" path="res://scripts/player.gd" id="1_0wfyh"]
 [ext_resource type="Script" uid="uid://cgn0wro10wdia" path="res://scripts/main.gd" id="1_tbgi4"]
@@ -8,7 +8,10 @@
 [ext_resource type="Script" uid="uid://df7kwffubrvab" path="res://scripts/drain_lines.gd" id="5_85g3d"]
 [ext_resource type="PackedScene" uid="uid://mmjmsfh161nm" path="res://prefabs/line.tscn" id="6_choun"]
 [ext_resource type="PackedScene" uid="uid://bc3hv7llrqc1s" path="res://prefabs/debug_spawn.tscn" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://f4beparo6paa" path="res://lSTINK!l/MagicItems/MagicItem.tscn" id="7_85g3d"]
+[ext_resource type="Texture2D" uid="uid://cdf7fvrtgh5je" path="res://sprites/white.png" id="7_eb6dy"]
+[ext_resource type="Script" uid="uid://du50lnpgx4w1r" path="res://scripts/number_incrementer.gd" id="8_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://q41i7e535s0a" path="res://prefabs/book.tscn" id="8_trceg"]
+[ext_resource type="PackedScene" uid="uid://cja5m1iwn5vvh" path="res://prefabs/broom.tscn" id="9_ya4ey"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jyhfs"]
 friction = 0.0
@@ -19,8 +22,3267 @@ radius = 4.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_o6xl0"]
 radius = 39.0
 
+[sub_resource type="Curve2D" id="Curve2D_2wyq8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, -100, 0, 0, 0, 0, 100, -200)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_vxglm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 0, 0, 0, 0, 0, 100, -100, 0, 0, 0, 0, 0, -100)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_jscy8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 600, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_pm3ni"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 400, -400)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_og1vs"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -200, 200)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_y6deb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, -150, 0, 0, 0, 0, 0, -300)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_gqmmt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, -100, 0, 0, 0, 0, 0, -200)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_yc10j"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -100, 100, 0, 0, 0, 0, 0, 200)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_dp3eg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -200, 0, 0, 0, 0, 0, -200, -200, 0, 0, 0, 0, 0, -200, 0, 0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_0ld40"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -200, 0, 0, 0, 0, 0, -200, -200, 0, 0, 0, 0, 0, -200, 0, 0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_eb6dy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, -100)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_jbj1t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 200)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_muem4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -200)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_jkv2x"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -120, 120)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_ya4ey"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -100, -100)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_trceg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_a8y0u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -100, 100)
+}
+point_count = 2
+
 [node name="main" type="Node2D"]
 script = ExtResource("1_tbgi4")
+
+[node name="background" type="Sprite2D" parent="."]
+self_modulate = Color(0.210366, 0.150167, 0.0583393, 1)
+z_index = -100
+scale = Vector2(36.8801, 36.8801)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+
+[node name="tile3" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid2" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(0, 512)
+
+[node name="tile3" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid2"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid3" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(-512, 512)
+
+[node name="tile3" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid3"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid4" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(-512, 0)
+
+[node name="tile3" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid4"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid5" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(-1024, 0)
+
+[node name="tile3" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid5"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid9" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(0, -512)
+
+[node name="tile3" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid9"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid10" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(-512, -512)
+
+[node name="tile3" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid10"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid11" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(-1024, -512)
+
+[node name="tile3" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid11"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid12" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(0, 1024)
+
+[node name="tile3" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid12"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid13" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(-512, 1024)
+
+[node name="tile3" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid13"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid14" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(-1024, 1024)
+
+[node name="tile3" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid14"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid6" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(-1024, 512)
+
+[node name="tile3" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid6"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid7" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(512, 512)
+
+[node name="tile3" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid7"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid8" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(512, 0)
+
+[node name="tile3" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid8"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid15" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(512, 1024)
+
+[node name="tile3" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid15"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="grid16" type="Node2D" parent="background"]
+top_level = true
+z_index = -99
+position = Vector2(512, -512)
+
+[node name="tile3" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile4" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile5" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile6" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(32.3194, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile7" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile8" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile9" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile10" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(96.3194, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile11" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile12" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile13" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile14" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(160.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile15" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile16" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile17" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile18" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(224.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile19" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile20" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile21" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile22" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(288.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile23" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile24" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile25" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile26" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(352.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile27" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -287.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile28" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -415.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile29" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -31.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile30" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(416.319, -159.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile31" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -223.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile32" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -351.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile33" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, 32.2)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
+
+[node name="tile34" type="Sprite2D" parent="background/grid16"]
+modulate = Color(0.160817, 0.10601, 0.0502265, 1)
+position = Vector2(480.319, -95.8)
+scale = Vector2(0.646388, 0.644)
+texture = ExtResource("7_eb6dy")
 
 [node name="world" type="Node2D" parent="."]
 
@@ -31,7 +3293,7 @@ lock_rotation = true
 contact_monitor = true
 max_contacts_reported = 10
 script = ExtResource("1_0wfyh")
-movement_speed = 20.0
+movement_speed = 40.0
 
 [node name="sprite" type="AnimatedSprite2D" parent="world/player"]
 texture_filter = 1
@@ -53,19 +3315,352 @@ shape = SubResource("CircleShape2D_o6xl0")
 script = ExtResource("5_85g3d")
 line_prefab = ExtResource("6_choun")
 
+[node name="camera" type="Camera2D" parent="world/player"]
+zoom = Vector2(3, 3)
+
+[node name="game" type="CenterContainer" parent="world/player/camera"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+use_top_left = true
+
+[node name="vbox" type="VBoxContainer" parent="world/player/camera/game"]
+layout_mode = 2
+alignment = 1
+
+[node name="Panel" type="Panel" parent="world/player/camera/game/vbox"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 800)
+layout_mode = 2
+
+[node name="objects_consumed" type="Label" parent="world/player/camera/game/vbox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Objects consumed:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="objects_consumed_count" type="Label" parent="world/player/camera/game/vbox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_eb6dy")
+
+[node name="total" type="CenterContainer" parent="world/player/camera"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+use_top_left = true
+
+[node name="vbox" type="VBoxContainer" parent="world/player/camera/total"]
+layout_mode = 2
+alignment = 1
+
+[node name="objects_consumed" type="Label" parent="world/player/camera/total/vbox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Total objects consumed:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="objects_consumed_count" type="Label" parent="world/player/camera/total/vbox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_eb6dy")
+
+[node name="try_again" type="Label" parent="world/player/camera/total/vbox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Try again for a higher score!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="health_mask" type="Sprite2D" parent="world/player"]
+self_modulate = Color(0.51599, 0, 0.103879, 1)
+clip_children = 1
+position = Vector2(0, 16)
+scale = Vector2(0.113838, 0.0186094)
+texture = ExtResource("7_eb6dy")
+
+[node name="red" type="Sprite2D" parent="world/player/health_mask"]
+self_modulate = Color(0.51599, 0, 0.103879, 1)
+clip_children = 1
+position = Vector2(7.62939e-06, 0)
+texture = ExtResource("7_eb6dy")
+
+[node name="health" type="Sprite2D" parent="world/player/health_mask"]
+self_modulate = Color(1.56425e-06, 0.567817, 0.225499, 1)
+texture = ExtResource("7_eb6dy")
+
 [node name="props" type="Node2D" parent="world"]
 
 [node name="entities" type="Node2D" parent="world"]
 
-[node name="MagicItem" parent="world/entities" instance=ExtResource("7_85g3d")]
-position = Vector2(23, 15)
+[node name="pattern6" type="Node2D" parent="world/entities"]
+position = Vector2(144, -144)
+
+[node name="book4" parent="world/entities/pattern6" instance=ExtResource("8_trceg")]
+position = Vector2(144, -144)
+
+[node name="path" parent="world/entities/pattern6/book4" index="2"]
+curve = SubResource("Curve2D_2wyq8")
+
+[node name="book5" parent="world/entities/pattern6" instance=ExtResource("8_trceg")]
+position = Vector2(248, -248)
+
+[node name="path" parent="world/entities/pattern6/book5" index="2"]
+curve = SubResource("Curve2D_2wyq8")
+
+[node name="book6" parent="world/entities/pattern6" instance=ExtResource("8_trceg")]
+position = Vector2(144, 40)
+drainable_seconds = 3.0
+
+[node name="path" parent="world/entities/pattern6/book6" index="2"]
+curve = SubResource("Curve2D_vxglm")
+
+[node name="book7" parent="world/entities/pattern6" instance=ExtResource("8_trceg")]
+position = Vector2(240, 40)
+drainable_seconds = 3.0
+
+[node name="path" parent="world/entities/pattern6/book7" index="2"]
+curve = SubResource("Curve2D_vxglm")
+
+[node name="book8" parent="world/entities/pattern6" instance=ExtResource("8_trceg")]
+position = Vector2(240, 144)
+drainable_seconds = 3.0
+
+[node name="path" parent="world/entities/pattern6/book8" index="2"]
+curve = SubResource("Curve2D_vxglm")
+
+[node name="book9" parent="world/entities/pattern6" instance=ExtResource("8_trceg")]
+position = Vector2(136, 144)
+drainable_seconds = 3.0
+
+[node name="path" parent="world/entities/pattern6/book9" index="2"]
+curve = SubResource("Curve2D_vxglm")
+
+[node name="pattern5" type="Node2D" parent="world/entities"]
+position = Vector2(304, -192)
+
+[node name="book" parent="world/entities/pattern5" instance=ExtResource("8_trceg")]
+position = Vector2(-752, 0)
+speed = 0.7
+
+[node name="path" parent="world/entities/pattern5/book" index="2"]
+curve = SubResource("Curve2D_jscy8")
+
+[node name="book2" parent="world/entities/pattern5" instance=ExtResource("8_trceg")]
+position = Vector2(-624, 0)
+speed = 0.7
+
+[node name="path" parent="world/entities/pattern5/book2" index="2"]
+curve = SubResource("Curve2D_pm3ni")
+
+[node name="book4" parent="world/entities/pattern5" instance=ExtResource("8_trceg")]
+position = Vector2(-208, -256)
+speed = 0.7
+
+[node name="path" parent="world/entities/pattern5/book4" index="2"]
+curve = SubResource("Curve2D_og1vs")
+
+[node name="book3" parent="world/entities/pattern5" instance=ExtResource("8_trceg")]
+position = Vector2(-200, -96)
+speed = 0.7
+
+[node name="path" parent="world/entities/pattern5/book3" index="2"]
+curve = SubResource("Curve2D_y6deb")
+
+[node name="book5" parent="world/entities/pattern5" instance=ExtResource("8_trceg")]
+position = Vector2(-688, -64)
+drainable_seconds = 5.0
+
+[node name="path" parent="world/entities/pattern5/book5" index="2"]
+curve = SubResource("Curve2D_gqmmt")
+
+[node name="pattern4" type="Node2D" parent="world/entities"]
+position = Vector2(-320, 96)
+
+[node name="book" parent="world/entities/pattern4" instance=ExtResource("8_trceg")]
+drainable_seconds = 5.0
+
+[node name="path" parent="world/entities/pattern4/book" index="2"]
+curve = SubResource("Curve2D_gqmmt")
+
+[node name="book3" parent="world/entities/pattern4" instance=ExtResource("8_trceg")]
+position = Vector2(-224, 0)
+drainable_seconds = 5.0
+
+[node name="path" parent="world/entities/pattern4/book3" index="2"]
+curve = SubResource("Curve2D_gqmmt")
+
+[node name="book2" parent="world/entities/pattern4" instance=ExtResource("8_trceg")]
+position = Vector2(0, -200)
+drainable_seconds = 5.0
+
+[node name="path" parent="world/entities/pattern4/book2" index="2"]
+curve = SubResource("Curve2D_yc10j")
+
+[node name="book4" parent="world/entities/pattern4" instance=ExtResource("8_trceg")]
+position = Vector2(-224, -200)
+drainable_seconds = 5.0
+
+[node name="path" parent="world/entities/pattern4/book4" index="2"]
+curve = SubResource("Curve2D_yc10j")
+
+[node name="pattern3" type="Node2D" parent="world/entities"]
+position = Vector2(-144, 144)
+
+[node name="book5" parent="world/entities/pattern3" instance=ExtResource("8_trceg")]
+position = Vector2(-40, 224)
+speed = 1.0
+
+[node name="path" parent="world/entities/pattern3/book5" index="2"]
+curve = SubResource("Curve2D_dp3eg")
+
+[node name="book6" parent="world/entities/pattern3" instance=ExtResource("8_trceg")]
+position = Vector2(-128, 312)
+speed = 1.0
+
+[node name="path" parent="world/entities/pattern3/book6" index="2"]
+curve = SubResource("Curve2D_0ld40")
+
+[node name="book2" parent="world/entities/pattern3" instance=ExtResource("8_trceg")]
+position = Vector2(-240, 224)
+
+[node name="path" parent="world/entities/pattern3/book2" index="2"]
+curve = SubResource("Curve2D_eb6dy")
+
+[node name="pattern2" type="Node2D" parent="world/entities"]
+position = Vector2(0, 144)
+
+[node name="book" parent="world/entities/pattern2" instance=ExtResource("8_trceg")]
+position = Vector2(40, 0)
+speed = 4.0
+drainable_seconds = 5.0
+
+[node name="path" parent="world/entities/pattern2/book" index="2"]
+curve = SubResource("Curve2D_jbj1t")
+
+[node name="book2" parent="world/entities/pattern2" instance=ExtResource("8_trceg")]
+position = Vector2(-40, 200)
+speed = 4.0
+drainable_seconds = 5.0
+
+[node name="path" parent="world/entities/pattern2/book2" index="2"]
+curve = SubResource("Curve2D_muem4")
+
+[node name="pattern1" type="Node2D" parent="world/entities"]
+position = Vector2(144, 144)
+
+[node name="book" parent="world/entities/pattern1" instance=ExtResource("8_trceg")]
+position = Vector2(72, -72)
+speed = 3.0
+drainable_seconds = 3.0
+
+[node name="path" parent="world/entities/pattern1/book" index="2"]
+curve = SubResource("Curve2D_jkv2x")
+
+[node name="book2" parent="world/entities/pattern1" instance=ExtResource("8_trceg")]
+position = Vector2(72, 72)
+speed = 3.0
+drainable_seconds = 3.0
+
+[node name="path" parent="world/entities/pattern1/book2" index="2"]
+curve = SubResource("Curve2D_jkv2x")
+
+[node name="book3" parent="world/entities/pattern1" instance=ExtResource("8_trceg")]
+position = Vector2(216, 72)
+speed = 3.0
+drainable_seconds = 3.0
+
+[node name="path" parent="world/entities/pattern1/book3" index="2"]
+curve = SubResource("Curve2D_jkv2x")
+
+[node name="book4" parent="world/entities/pattern1" instance=ExtResource("8_trceg")]
+position = Vector2(216, -72)
+speed = 3.0
+drainable_seconds = 3.0
+
+[node name="path" parent="world/entities/pattern1/book4" index="2"]
+curve = SubResource("Curve2D_jkv2x")
+
+[node name="book" parent="world/entities" instance=ExtResource("8_trceg")]
+position = Vector2(144, 144)
+drainable_seconds = 7.0
+
+[node name="path" parent="world/entities/book" index="2"]
+curve = SubResource("Curve2D_ya4ey")
+
+[node name="book2" parent="world/entities" instance=ExtResource("8_trceg")]
+position = Vector2(-144, 144)
+drainable_seconds = 7.0
+
+[node name="path" parent="world/entities/book2" index="2"]
+curve = SubResource("Curve2D_eb6dy")
+
+[node name="book3" parent="world/entities" instance=ExtResource("8_trceg")]
+position = Vector2(-144, -144)
+drainable_seconds = 7.0
+
+[node name="path" parent="world/entities/book3" index="2"]
+curve = SubResource("Curve2D_trceg")
+
+[node name="book4" parent="world/entities" instance=ExtResource("8_trceg")]
+position = Vector2(144, -144)
+drainable_seconds = 7.0
+
+[node name="path" parent="world/entities/book4" index="2"]
+curve = SubResource("Curve2D_a8y0u")
+
+[node name="broom" parent="world/entities" instance=ExtResource("9_ya4ey")]
+position = Vector2(-4, 30)
+
+[node name="paths" type="Node2D" parent="world"]
 
 [node name="debug_spawner" type="Node2D" parent="."]
 script = ExtResource("4_jyhfs")
 debug_spawn = ExtResource("6_tefeu")
 
-[node name="camera" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
-
 [connection signal="body_entered" from="world/player/drain_zone" to="world/player/drain_zone" method="_on_body_entered"]
 [connection signal="body_exited" from="world/player/drain_zone" to="world/player/drain_zone" method="_on_body_exited"]
+
+[editable path="world/entities/pattern6/book4"]
+[editable path="world/entities/pattern6/book5"]
+[editable path="world/entities/pattern6/book6"]
+[editable path="world/entities/pattern6/book7"]
+[editable path="world/entities/pattern6/book8"]
+[editable path="world/entities/pattern6/book9"]
+[editable path="world/entities/pattern5/book"]
+[editable path="world/entities/pattern5/book2"]
+[editable path="world/entities/pattern5/book4"]
+[editable path="world/entities/pattern5/book3"]
+[editable path="world/entities/pattern5/book5"]
+[editable path="world/entities/pattern4/book"]
+[editable path="world/entities/pattern4/book3"]
+[editable path="world/entities/pattern4/book2"]
+[editable path="world/entities/pattern4/book4"]
+[editable path="world/entities/pattern3/book5"]
+[editable path="world/entities/pattern3/book6"]
+[editable path="world/entities/pattern3/book2"]
+[editable path="world/entities/pattern2/book"]
+[editable path="world/entities/pattern2/book2"]
+[editable path="world/entities/pattern1/book"]
+[editable path="world/entities/pattern1/book2"]
+[editable path="world/entities/pattern1/book3"]
+[editable path="world/entities/pattern1/book4"]
+[editable path="world/entities/book"]
+[editable path="world/entities/book2"]
+[editable path="world/entities/book3"]
+[editable path="world/entities/book4"]
